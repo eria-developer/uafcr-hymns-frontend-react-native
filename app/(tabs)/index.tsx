@@ -12,6 +12,7 @@ import {
 import React from "react";
 import Colors from "../shared/Colors";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import HymnList from "../components/HymnList";
 
 const index = () => {
   const hymnCategories = [
@@ -69,6 +70,7 @@ const index = () => {
         "https://images.squarespace-cdn.com/content/v1/594c2a87d482e915c4aa15cc/1498672480766-AELIIDMSZ588HHDRQFSK/kristina-flour-185602.jpg?format=750w",
     },
   ];
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
@@ -164,85 +166,10 @@ const index = () => {
               </Text>
             </View>
           </View>
-
-          <FlatList
-            data={forYouHymns}
-            keyExtractor={(item) => item.id.toString()}
-            renderItem={({ item }) => (
-              <View
-                style={{
-                  flexDirection: "row",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  marginVertical: 5,
-                }}
-              >
-                <View style={{ flexDirection: "row", alignItems: "center" }}>
-                  <View>
-                    <Image
-                      source={{
-                        uri: item.imageUrl,
-                      }}
-                      resizeMode="cover"
-                      style={styles.topHymnImage}
-                    />
-                  </View>
-                  <View style={{ marginLeft: 10 }}>
-                    <Text style={{ fontSize: 18 }}>
-                      Nsanyuka yesu yandokola
-                    </Text>
-                    <Text>Loving Hymn</Text>
-                  </View>
-                </View>
-                <View>
-                  <MaterialIcons
-                    name="favorite-outline"
-                    size={24}
-                    color={Colors.red}
-                  />
-                </View>
-              </View>
-            )}
-          />
-          <FlatList
-            data={forYouHymns}
-            keyExtractor={(item) => item.id.toString()}
-            renderItem={({ item }) => (
-              <View
-                style={{
-                  flexDirection: "row",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  marginVertical: 5,
-                }}
-              >
-                <View style={{ flexDirection: "row", alignItems: "center" }}>
-                  <View>
-                    <Image
-                      source={{
-                        uri: item.imageUrl,
-                      }}
-                      resizeMode="cover"
-                      style={styles.topHymnImage}
-                    />
-                  </View>
-                  <View style={{ marginLeft: 10 }}>
-                    <Text style={{ fontSize: 18 }}>
-                      Nsanyuka yesu yandokola
-                    </Text>
-                    <Text>Loving Hymn</Text>
-                  </View>
-                </View>
-                <View>
-                  <MaterialIcons
-                    name="favorite-outline"
-                    size={24}
-                    color={Colors.red}
-                  />
-                </View>
-              </View>
-            )}
-          />
+          <HymnList />
+          <HymnList />
+          <HymnList />
+          <HymnList />
 
           {/* end of top hymns section  */}
         </View>
@@ -325,11 +252,5 @@ const styles = StyleSheet.create({
     height: 70,
     marginRight: 10,
     marginTop: 10,
-  },
-
-  topHymnImage: {
-    width: 50,
-    height: 50,
-    borderRadius: 5,
   },
 });
