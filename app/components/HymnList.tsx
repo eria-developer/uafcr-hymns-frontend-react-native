@@ -85,6 +85,7 @@ const HymnList = () => {
             </View>
           </View>
         )}
+        // scrollEnabled={false}
       />
     </View>
   );

@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "app/components/HymnList.tsx", "app/(tabs)/hymns.tsx"  ]
 }
