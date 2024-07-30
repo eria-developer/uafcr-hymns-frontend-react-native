@@ -84,6 +84,12 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="hymnDetails/[id]"
+        options={{
+          href: null,
+        }}
+      />
     </Tabs>
   );
 }
