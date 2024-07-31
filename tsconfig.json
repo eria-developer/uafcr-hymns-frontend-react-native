@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "app/components/HymnList.jsx", "app/(tabs)/hymns.tsx", "app/(tabs)/hymnDetails.jsx"  ]
+, "app/components/HymnList.jsx", "app/(tabs)/hymns.jsx", "app/(tabs)/hymnDetails.jsx", "app/(tabs)/index.jsx", "app/components/SearchBar.jsx"  ]
 }
